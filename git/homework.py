@@ -152,7 +152,6 @@ def simple_sort(data: List[int]) -> List[list]:
     """
     for value in range(len(data)):
         for simile in range(len(data)):
-            print(data[value] < data[simile])
             if data[value] < data[simile]:
                 data[value], data[simile] = data[simile], data[value]
     return data
