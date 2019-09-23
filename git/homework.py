@@ -81,7 +81,7 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
         >>> "Not valid input data"
     """
     try:
-        return int(first_value) * int(second_value)
+        return int(first_value)*int(second_value)
     except Exception:
         pass
     raise ValueError('Not valid input data')
