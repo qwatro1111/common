@@ -81,9 +81,10 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
         >>> "Not valid input data"
     """
     try:
-        return int(first_value)*int(second_value)
-    except (ValueError, TypeError):
-        print("That was no valid numbers!")
+        return int(first_value) * int(second_value)
+    except Exception:
+        pass
+    raise ValueError('Not valid input data')
 
 
 def is_word_in_text(word: str, text: str) -> bool:
@@ -133,10 +134,10 @@ def alphabet() -> dict:
         >>> {"a": 1, "b": 2 ...}
     """
     alphabet = {}
-    value = 0
+    key = 0
     for letter in range(97, 123):
-        value += 1
-        alphabet[value] = chr(letter)
+        key += 1
+        alphabet[key] = chr(letter)
     return alphabet
 
 
