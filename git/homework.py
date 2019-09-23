@@ -49,7 +49,7 @@ def multiple_ints(first_value: int, second_value: int) -> int:
         Product of elements
     """
     if isinstance(first_value, int) and isinstance(second_value, int):
-        return first_value * second_value
+        return first_value*second_value
     raise ValueError("That was no valid number!")
 
 
