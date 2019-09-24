@@ -38,10 +38,8 @@ def multiple_ints(first_value: int, second_value: int) -> int:
     """
     Should calculate product of all args.
     if first_value or second_value is not int should raise ValueError
-
     Raises:
         ValueError
-
     Params:
         first_value: value for multiply
         second_value
@@ -57,16 +55,12 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
     """
     If possible to convert arguments to int value - convert and multiply them.
     If it is impossible raise ValueError
-
     Args:
         first_value: number for multiply
         second_value: number for multiply
-
     Raises:
         ValueError
-
     Returns: multiple of two numbers.
-
     Examples:
         multiple_ints_with_conversion(6, 6)
         >>> 36
@@ -91,17 +85,14 @@ def is_word_in_text(word: str, text: str) -> bool:
     """
     If text contain word return True
     In another case return False.
-
     Args:
         word: Searchable substring
         text: Text for searching
-
     Examples:
         is_word_in_text("Hello", "Hello word")
         >>> True
         is_word_in_text("Glad", "Nice to meet you ")
         >>> False
-
     """
     return word in text
 
@@ -148,7 +139,6 @@ def simple_sort(data: List[int]) -> List[list]:
         simple_sort([2, 9, 6, 7, 3, 2, 1])
         >>> [1, 2, 2, 3, 6, 7, 9]
     Returns:
-
     """
     for value in range(len(data)):
         for simile in range(len(data)):
