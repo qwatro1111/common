@@ -173,7 +173,13 @@ def task_13_list_products_from_sweden_suppliers(cur):
 
     Returns: 3 records
     """
-    cur.execute("SELECT productname FROM products INNER JOIN suppliers ON products.supplierid=suppliers.supplierid WHERE country='Sweden';")
+    cur.execute("""
+        SELECT 
+            productname 
+        FROM products 
+        INNER JOIN suppliers ON products.supplierid=suppliers.supplierid 
+        WHERE country='Sweden';
+    """)
     return cur.fetchall()
 
 def task_14_list_products_with_supplier_information(cur):
