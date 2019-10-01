@@ -1,10 +1,10 @@
-INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chais',1,1,'10 boxes x 20 bags',18);
+INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chais',1,1,'10 boxes x 20 bags',18.00);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chang',1,1,'24 - 12 oz bottles',19);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Aniseed Syrup',1,2,'12 - 550 ml bottles','10');
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chef Anton''s Cajun Seasoning',2,2,'48 - 6 oz jars',22);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chef Anton''s Gumbo Mix',2,2,'36 boxes',21.35);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Grandma''s Boysenberry Spread',3,2,'12 - 8 oz jars',25);
-INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Uncle Bob''s Organic Dried Pears',3,7,'12 - 1 lb pkgs.','30');
+INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Uncle Bob''s Organic Dried Pears',3,7,'12 - 1 lb pkgs.',30);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Northwoods Cranberry Sauce',3,2,'12 - 12 oz jars','40');
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Mishi Kobe Niku',4,6,'18 - 500 g pkgs.',97);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Ikura',4,8,'12 - 200 ml jars',31);
@@ -18,7 +18,7 @@ INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Alic
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Carnarvon Tigers',7,8,'16 kg pkg.',62.5);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Teatime Chocolate Biscuits',8,3,'10 boxes x 12 pieces',9.2);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Sir Rodney''s Marmalade',8,3,'30 gift boxes',81);
-INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Sir Rodney''s Scones',8,3,'24 pkgs. x 4 pieces','10');
+INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Sir Rodney''s Scones',8,3,'24 pkgs. x 4 pieces',10);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Gustaf''s Knäckebröd',9,5,'24 - 500 g pkgs.',21);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Tunnbröd',9,5,'12 - 250 g pkgs.',9);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Guaraná Fantástica','10',1,'12 - 355 ml cans',4.5);
@@ -46,7 +46,7 @@ INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Røg
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Spegesild',21,8,'4 - 450 g glasses',12);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Zaanse koeken',22,3,'10 - 4 oz boxes',9.5);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chocolade',22,3,'10 pkgs.',12.75);
-INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Maxilaku',23,3,'24 - 50 g pkgs.','20');
+INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Maxilaku',23,3,'24 - 50 g pkgs.',20);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Valkoinen suklaa',23,3,'12 - 100 g bars',16.25);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Manjimup Dried Apples',24,7,'50 - 300 g pkgs.',53);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Filo Mix',24,5,'16 - 2 kg boxes',7);

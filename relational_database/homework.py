@@ -111,7 +111,7 @@ def task_8_count_customers_by_city(cur):
     Returns: 69 records in descending order
 
     """
-    cur.execute("SELECT COUNT(customers) AS count, city FROM customers GROUP BY city ORDER BY city DESC;")
+    cur.execute("SELECT COUNT(customers), city FROM Customers GROUP BY city ORDER BY city DESC;")
     return cur.fetchall()
 
 
@@ -187,15 +187,15 @@ def task_14_list_products_with_supplier_information(cur):
     """
     cur.execute("""
         SELECT 
-            productid, 
-            productname, 
-            unit, 
-            price, 
-            country, 
-            city, 
-            suppliername 
-        FROM products 
-        LEFT JOIN suppliers ON products.supplierid=suppliers.supplierid;
+            Products.ProductId, 
+            Products.ProductName, 
+            Products.Unit, 
+            Products.Price, 
+            Suppliers.Country, 
+            Suppliers.City, 
+            Suppliers.SupplierName 
+        FROM Products 
+        LEFT JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID;
     """)
     return cur.fetchall()
 
