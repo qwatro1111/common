@@ -1,11 +1,11 @@
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chais',1,1,'10 boxes x 20 bags',18.00);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chang',1,1,'24 - 12 oz bottles',19);
-INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Aniseed Syrup',1,2,'12 - 550 ml bottles','10');
+INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Aniseed Syrup',1,2,'12 - 550 ml bottles',10);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chef Anton''s Cajun Seasoning',2,2,'48 - 6 oz jars',22);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Chef Anton''s Gumbo Mix',2,2,'36 boxes',21.35);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Grandma''s Boysenberry Spread',3,2,'12 - 8 oz jars',25);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Uncle Bob''s Organic Dried Pears',3,7,'12 - 1 lb pkgs.',30);
-INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Northwoods Cranberry Sauce',3,2,'12 - 12 oz jars','40');
+INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Northwoods Cranberry Sauce',3,2,'12 - 12 oz jars',40);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Mishi Kobe Niku',4,6,'18 - 500 g pkgs.',97);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Ikura',4,8,'12 - 200 ml jars',31);
 INSERT INTO Products(ProductName,SupplierID,CategoryID,Unit,Price) VALUES ('Queso Cabrales',5,4,'1 kg pkg.',21);

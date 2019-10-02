@@ -165,7 +165,8 @@ class TestSQLQueries(unittest.TestCase):
             expected_result = self.load_rows_from_file("task_8.json")
 
         for i, row in enumerate(actual_result):
-            self.assertDictEqual(row, expected_result[i])
+            serch = [value for value in expected_result if value['city'] == row['city']][0]
+            self.assertDictEqual(row, serch)
 
     def test_task_9(self):
         with self.conn.cursor(cursor_factory=RealDictCursor) as cursor:
