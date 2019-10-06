@@ -1,5 +1,6 @@
 import unittest
-from math import sqrt
+import math
+
 from homework import Rectangle
 
 class Test(unittest.TestCase):
@@ -32,7 +33,7 @@ class Test(unittest.TestCase):
             self.rectangle.get_sum_of_corners(0)
 
     def test_6_rectangle_diagonal(self):
-        cheack = sqrt(self.width**2 + self.height**2)
+        cheack = math.sqrt(self.width**2 + self.height**2)
         result = self.rectangle.get_rectangle_diagonal()
         self.assertEqual(cheack, result)
 
@@ -43,7 +44,7 @@ class Test(unittest.TestCase):
 
     def test_8_radius_of_inscribed_circle(self):
         rectangle = Rectangle(width=1, height=1)
-        cheack = rectangle.get_rectangle_diagonal() / 2 * sqrt(2)
+        cheack = rectangle.get_rectangle_diagonal() / 2 * math.sqrt(2)
         result = rectangle.get_radius_of_inscribed_circle()
         self.assertEqual(cheack, result)
 
