@@ -39,7 +39,7 @@ class Test(unittest.TestCase):
         self.assertEqual(check, result)
 
     def test_7_radius_of_inscribed_circle(self):
-        check = self.width / 2 * math.sqrt(2)
+        check = self.width / 2
         result = Rectangle(width=self.width, height=self.width).get_radius_of_inscribed_circle()
         self.assertEqual(check, result)
 
