@@ -102,7 +102,6 @@ class Practice:
             if isinstance(i, tuple):
                 break
             count+=1
-        print(count)
         return count
 
     def task_10(string):
