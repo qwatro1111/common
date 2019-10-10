@@ -87,8 +87,8 @@ class Practice:
         Input : [1,2,3,4,6,7,8]
         Output : 5
         """
-        otp = list(set([i for i in range(lst[0],lst[-1]+1)]) - set(lst))
-        return otp[0]
+        lst = list(set([i for i in range(min(lst),max(lst))]) - set(lst))
+        return lst[0]
 
     def task_9(lst):
         """
@@ -139,7 +139,7 @@ class Practice:
         import re
         return max(re.sub(r"[^a-zA-Z]+", " ", string).split(" "), key=len)
 
-    def task_13(string):
+    def task_13():
         """
         Write a program (using functions!) that asks the user for a long string containing
         multiple words. Print back to the user the same string, except with the words in backwards order.
@@ -147,6 +147,7 @@ class Practice:
         Input: My name is Michele
         Outout: Michele is name My:
         """
+        string = input("Input a long string: ")
         return " ".join(string.split(" ")[::-1])
 
     def task_14():
@@ -164,7 +165,6 @@ class Practice:
         for i in range(int(n)):
             a, b = b, a + b
             numbers.append(str(a))
-        print(",".join(numbers))
         return True
 
     def task_15(lst):
@@ -187,9 +187,13 @@ class Practice:
         Write a program that will take the parameter being passed and return the factorial of it.
         For example: if num = 4, then your program should return (4 * 3 * 2 * 1) = 24.
         """
-        return math.factorial(num)
+        factorial = 1
+        while num > 1:
+            factorial *= num
+            num -= 1
+        return factorial
 
-    def task_18(str):
+    def task_18(string):
         """
         Write a program that will take the str parameter being passed and modify it using
         the following algorithm. Replace every letter in the string with the letter following
@@ -198,8 +202,16 @@ class Practice:
         Input: abcd
         Output: bcdE
         """
-        new_str = "".join([chr(ord(i)+1) for i in str])
-        return "".join([i.upper() if i in 'a,e,i,o,u' else i for i in new_str])
+        my_string = "";
+        for i in string:
+            if i == 'z':
+                my_string += 'a'
+                continue
+            elif i == 'Z':
+                my_string += 'A'
+                continue
+            my_string += chr(ord(i)+1)
+        return "".join([i.upper() if i in 'aeiou' else i for i in my_string])
 
     def task_19(string):
         """

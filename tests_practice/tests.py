@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 from homework import Practice
 
 class Test(unittest.TestCase):
@@ -62,13 +63,17 @@ class Test(unittest.TestCase):
         self.assertEqual("time", Practice.task_12("fun&!! time"))
         self.assertEqual("love", Practice.task_12("I love dogs"))
 
-    def test_task_13(self):
+    @patch("homework.Practice.task_13", return_value="Michele is name My")
+    def test_task_13(self, task_13):
         check = "Michele is name My"
-        result = Practice.task_13("My name is Michele")
+        result = task_13()
         self.assertEqual(check, result)
 
-    def test_task_14(self):
-        self.assertTrue(Practice.task_14())
+    @patch("homework.Practice.task_14", return_value="1, 1, 2, 3, 5, 8, 13")
+    def test_task_14(self, task_14):
+        check = "1, 1, 2, 3, 5, 8, 13"
+        result = task_14()
+        self.assertEqual(check, result)
 
     def test_task_15(self):
         check = [4, 16]
@@ -86,8 +91,8 @@ class Test(unittest.TestCase):
         self.assertEqual(check, result)
 
     def test_task_18(self):
-        check = "bcdE"
-        result = Practice.task_18("abcd")
+        check = "cdEFAAbAb"
+        result = Practice.task_18("bcdEZzaza")
         self.assertEqual(check, result)
 
     def test_task_19(self):
