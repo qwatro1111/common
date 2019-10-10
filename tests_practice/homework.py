@@ -23,13 +23,13 @@ class Practice:
         Input : 9
         Output : True
         """
-        n=9
-        p=1
+        n=27
+        p=x
         while p<=n:
             if p==n:
                 return True
             else:
-                p=p*(x*x)
+                p=p*x
         return False
 
 
@@ -158,7 +158,7 @@ class Practice:
         number in the sequence is the sum of the previous two numbers in the sequence.
         The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
         """
-        n = input("how many Fibonnaci numbers to generate? ")
+        n = input("How many Fibonnaci numbers to generate? ")
         a, b = 0, 1
         numbers = []
         for i in range(int(n)):
