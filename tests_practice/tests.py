@@ -46,7 +46,7 @@ class Test(unittest.TestCase):
 
     def test_task_9(self):
         check = 3
-        result = homework.task_9([1, 2, 3, (1,2), 3])
+        result = homework.task_9([1, 2, 3, (1, 2), 3])
         self.assertEqual(check, result)
 
     def test_task_10(self):

@@ -215,7 +215,7 @@ def task_18(string):
     Input: abcd
     Output: bcdE
     """
-    my_string = "";
+    my_string = ""
     for i in string:
         if i == 'z':
             my_string += 'a'
