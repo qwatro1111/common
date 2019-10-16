@@ -4,8 +4,8 @@ from unittest.mock import patch
 
 class Test(unittest.TestCase):
     def test_task_1(self):
-        a =[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-        b =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+        b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
         check = [1, 2, 3, 5, 8, 13]
         result = homework.task_1(a, b)
         self.assertEqual(check, result)
