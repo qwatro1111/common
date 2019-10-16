@@ -44,37 +44,32 @@ class Cat:
         self.saturation_level = 50
 
     def eat(self, product):
-        if product == 'fodder':
-            return self._increase_saturation_level(10)
-        elif product == 'apple':
-            return self._increase_saturation_level(5)
-        elif product == 'milk':
-            return self._increase_saturation_level(2)
-        else:
+        products_list = {
+            'fodder': 10,
+            'apple': 5,
+            'milk': 2
+        }
+        try:
+            return self._increase_saturation_level(products_list[product])
+        except KeyError:
             return self._increase_saturation_level(0)
 
     def _reduce_saturation_level(self, value):
         self.saturation_level -= value
         if self.saturation_level <= 0:
-            return 0
-        elif self.saturation_level >= 100:
-            return 100
-        else:
-            return self.saturation_level
+            self.saturation_level = 0
+        return self.saturation_level
 
     def _increase_saturation_level(self, value):
         self.saturation_level += value
-        if self.saturation_level <= 0:
-            return 0
-        elif self.saturation_level >= 100:
-            return 100
-        else:
-            return self.saturation_level
+        if self.saturation_level >= 100:
+            self.saturation_level = 100
+        return self.saturation_level
 
     def _set_average_speed(self):
         if self.age <= 7:
             return 12
-        elif self.age > 7 and self.age <= 10:
+        elif 7 < self.age <= 10:
             return 9
         else:
             return 6
@@ -83,11 +78,11 @@ class Cat:
         ran_km = self._set_average_speed() * hours
         if ran_km <= 25:
             self._reduce_saturation_level(2)
-        elif ran_km > 25 and ran_km <= 50:
+        elif 25 < ran_km <= 50:
             self._reduce_saturation_level(5)
-        elif ran_km > 50 and ran_km <=100:
+        elif 50 < ran_km <= 100:
             self._reduce_saturation_level(15)
-        elif ran_km > 100 and ran_km <=200:
+        elif 100 < ran_km <= 200:
             self._reduce_saturation_level(25)
         else:
             self._reduce_saturation_level(50)
@@ -117,17 +112,19 @@ class Cheetah(Cat):
 
     """
     def eat(self, product):
-        if product == 'gazelle':
-            return self._increase_saturation_level(30)
-        elif product == 'rabbit':
-            return self._increase_saturation_level(15)
-        else:
+        products_list = {
+            'gazelle': 30,
+            'rabbit': 15
+        }
+        try:
+            return self._increase_saturation_level(products_list[product])
+        except KeyError:
             return self._increase_saturation_level(0)
 
     def _set_average_speed(self):
         if self.age <= 5:
             return 90
-        elif self.age > 5 and self.age <= 15:
+        elif 5 < self.age <= 15:
             return 75
         else:
             return 40
@@ -179,7 +176,8 @@ class Roof:
             return self.width * self.height * 2
         elif self.roof_type == 'single-pitch':
             return self.width * self.height
-        raise ValueError("Sorry there is only two types of roofs")
+        else:
+            raise ValueError("Sorry there is only two types of roofs")
 
 
 class Window:
@@ -227,10 +225,11 @@ class Door:
 
     def door_price(self, material):
         if material == 'wood':
-            return self.door_square()*self.wood_price
+            return self.door_square() * self.wood_price
         elif material == 'metal':
-            return self.door_square()*self.metal_price
-        raise ValueError("Sorry we don't have such material")
+            return self.door_square() * self.metal_price
+        else:
+            raise ValueError("Sorry we don't have such material")
 
     def update_wood_price(self, new_price):
         self.wood_price = new_price
