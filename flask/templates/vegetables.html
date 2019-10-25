@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h1>Vegetables page</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for i in catalog %}
+            {% if i == 'beetroot' %}
+                <li class="font-italic">{{ i }}</li>
+            {% else %}
+                <li>{{ i }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
