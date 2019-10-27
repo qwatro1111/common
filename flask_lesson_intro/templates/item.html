@@ -6,5 +6,7 @@
         <img src="{{url_for('static', filename=img+'.jpg')}}" height="360px">
     </div>
     <p>{{ data[0]['text'] }}</p>
+{% if count %}
     <p>The number of words in the text <b>{{count}}</b></p>
+{% endif %}
 {% endblock %}
