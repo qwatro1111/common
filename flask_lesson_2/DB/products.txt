@@ -1,0 +1,1 @@
+[{"id": 1, "name": "product 1", "description": "Description product 1", "img_name": "lorem-ipsum-generator-custom-placeholder-text.jpg", "price": 12.0}, {"id": 2, "name": "product 2", "description": "Description product 2", "img_name": "riba.png", "price": 15.0}]

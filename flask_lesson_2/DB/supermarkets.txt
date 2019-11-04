@@ -1,0 +1,1 @@
+[{"id": 1, "name": "supermarket 1", "location": "Kiev", "img_name": "lorem-ipsum-generator-custom-placeholder-text.jpg"}, {"id": 2, "name": "supermarket 2", "location": "Kiev", "img_name": "riba.png"}]

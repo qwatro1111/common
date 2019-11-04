@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-12">
+    {% if args %}
+        <h1>Products: {{ args['name'] }} {{ args['val'] }}</h1>
+    {% else %}
+        <h1>All products</h1>
+    {% endif %}
+</div>
+{% for product in products %}
+<div class="card col-4" style="width: 18rem;">
+    <img src="{{ url_for('static', filename=product.img_name ) }}" class="card-img-top" alt="{{ product.name }}">
+    <div class="card-body">
+        <h5 class="card-title"><a href="?name={{ product.name }}">{{ product.name }}</a></h5>
+        <p class="card-text"><a href="?price={{ product.price }}">Price: <b>{{ product.price }}</b></a></p>
+        <a href="{{ url_for('product.get_product', id=product.id ) }}" class="btn btn-primary {% if session.get('product_'+product.id|string) %}disabled{% endif %}">Go linck</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

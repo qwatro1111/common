@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col-12">
+    {% if args %}
+        <h1>Supermarkets: {{ args['name'] }} {{ args['val'] }}</h1>
+    {% else %}
+        <h1>All supermarkets</h1>
+    {% endif %}
+</div>
+{% for supermarket in supermarkets %}
+<div class="card col-4" style="width: 18rem;">
+    <img src="{{ url_for('static', filename=supermarket.img_name ) }}" class="card-img-top" alt="{{ supermarket.name }}">
+    <div class="card-body">
+        <h5 class="card-title"><a href="?name={{ supermarket.name }}">{{ supermarket.name }}</a></h5>
+        <p class="card-title"><a href="?location={{ supermarket.location }}">{{ supermarket.location }}</a></p>
+        <a href="{{ url_for('supermarkets.get_supermarket', id=supermarket.id ) }}" class="btn btn-primary {% if session.get('supermarket_'+supermarket.id|string) %}disabled{% endif %}">Go linck</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
