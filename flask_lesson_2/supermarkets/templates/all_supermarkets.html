@@ -15,7 +15,7 @@
     <div class="card-body">
         <h5 class="card-title"><a href="?name={{ supermarket.name }}">{{ supermarket.name }}</a></h5>
         <p class="card-title"><a href="?location={{ supermarket.location }}">{{ supermarket.location }}</a></p>
-        <a href="{{ url_for('supermarket.get_supermarket', id=supermarket.id ) }}" class="btn btn-primary {% if session.get('supermarket_'+supermarket.id|string) %}disabled{% endif %}">Go linck</a>
+        <a href="{{ url_for('supermarket.get_supermarket', id=supermarket.id ) }}" class="btn btn-primary {% if session.get('supermarket_'+supermarket.id|string) %}disabled{% endif %}">Go link</a>
     </div>
 </div>
 {% endfor %}
