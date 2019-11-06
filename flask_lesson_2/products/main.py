@@ -4,9 +4,15 @@ from .utils import get_data_products, add_data_products
 from .form import Add_product
 import os
 
-product = Blueprint('product', __name__, template_folder="templates")
+product = Blueprint(
+    'product',
+    __name__,
+    template_folder="templates",
+    static_folder="static",
+    static_url_path="/products/static"
+)
 
-@product.route('/products', methods=["GET"])
+@product.route('/product', methods=["GET"])
 def get_all_products():
     data_products = get_data_products()
     products = []
@@ -60,6 +66,6 @@ def add_product_save():
             "price": form.price.data
         }
         add_data_products(data)
-        return redirect('/products')
+        return redirect('/product')
     else:
         return redirect('/add_product')

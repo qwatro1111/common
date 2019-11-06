@@ -11,11 +11,11 @@
 </div>
 {% for supermarket in supermarkets %}
 <div class="card col-4" style="width: 18rem;">
-    <img src="{{ url_for('static', filename=supermarket.img_name ) }}" class="card-img-top" alt="{{ supermarket.name }}">
+    <img src="{{ url_for('supermarket.static', filename=supermarket.img_name ) }}" class="card-img-top" alt="{{ supermarket.name }}">
     <div class="card-body">
         <h5 class="card-title"><a href="?name={{ supermarket.name }}">{{ supermarket.name }}</a></h5>
         <p class="card-title"><a href="?location={{ supermarket.location }}">{{ supermarket.location }}</a></p>
-        <a href="{{ url_for('supermarkets.get_supermarket', id=supermarket.id ) }}" class="btn btn-primary {% if session.get('supermarket_'+supermarket.id|string) %}disabled{% endif %}">Go linck</a>
+        <a href="{{ url_for('supermarket.get_supermarket', id=supermarket.id ) }}" class="btn btn-primary {% if session.get('supermarket_'+supermarket.id|string) %}disabled{% endif %}">Go linck</a>
     </div>
 </div>
 {% endfor %}

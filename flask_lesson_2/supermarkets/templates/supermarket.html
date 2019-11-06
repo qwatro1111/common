@@ -6,7 +6,7 @@
     <h1>Supermarket: {{ supermarket.name }}</h1>
 </div>
 <div class="col-12">
-    <img src="{{ url_for('static', filename=supermarket.img_name ) }}" class="card-img-top" alt="{{ supermarket.name }}">
+    <img src="{{ url_for('supermarket.static', filename=supermarket.img_name ) }}" class="card-img-top" alt="{{ supermarket.name }}">
     <div class="card-body">
         <p class="card-text">{{ supermarket.location }}</p>
     </div>

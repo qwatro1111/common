@@ -4,9 +4,15 @@ from .utils import get_data_supermarkets, add_data_supermarkets
 from .form import Add_supermarket
 import os
 
-supermarket = Blueprint('supermarkets', __name__, template_folder="templates")
+supermarket = Blueprint(
+    'supermarket',
+    __name__,
+    template_folder="templates",
+    static_folder="static",
+    static_url_path="/products/static"
+)
 
-@supermarket.route('/supermarkets', methods=["GET"])
+@supermarket.route('/supermarket', methods=["GET"])
 def get_all_supermarkets():
     data_supermarkets = get_data_supermarkets()
     supermarkets = []
@@ -41,7 +47,6 @@ def add_supermarket_form():
 @supermarket.route('/add_supermarket', methods=["POST"])
 def add_supermarket_save():
     form = Add_supermarket(request.form)
-    print(form.location.data)
     if form.validate():
         supermarkets=get_data_supermarkets()
         id = 1
@@ -60,6 +65,6 @@ def add_supermarket_save():
             "img_name": img_name,
         }
         add_data_supermarkets(data)
-        return redirect('/supermarkets')
+        return redirect('/supermarket')
     else:
         return redirect('/add_supermarket')

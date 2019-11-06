@@ -8,6 +8,7 @@ app.register_blueprint(product)
 
 app.config['SECRET_KEY'] = 'my_first_secret_key'
 app.config['CSRF_ENABLED'] = True
+app.config["CACHE_TYPE"] = "null"
 
 @app.route('/')
 def get_home_page():
