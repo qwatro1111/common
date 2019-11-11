@@ -181,19 +181,19 @@ def task_12_list_suppliers_from_specified_countries(cur):
 
 def task_13_list_products_from_sweden_suppliers(cur):
     """
-    List products with suppliers from Sweden.
+    List products.txt with suppliers from Sweden.
 
     Args:
         cur: psycopg cursor
 
     Returns: 3 records
     """
-    cur.execute("SELECT productname FROM products INNER JOIN suppliers ON products.supplierid=suppliers.supplierid WHERE country='Sweden';")
+    cur.execute("SELECT productname FROM products.txt INNER JOIN suppliers ON products.txt.supplierid=suppliers.supplierid WHERE country='Sweden';")
     return cur.fetchall()
 
 def task_14_list_products_with_supplier_information(cur):
     """
-    List all products with supplier information
+    List all products.txt with supplier information
 
     Args:
         cur: psycopg cursor
