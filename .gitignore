@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-git/__pycache__/homework.cpython-36.pyc
-.idea
-/venv
-=======
 # IDE files
 .idea/
 __pycache__/
-
+git/__pycache__/homework.cpython-36.pyc
+.idea
+/venv
 .pyc
->>>>>>> upstream/master
+flask_lesson_4/venv
+flask_lesson_2/venv/
