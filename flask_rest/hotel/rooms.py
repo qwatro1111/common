@@ -1,8 +1,14 @@
 from flask import Blueprint, request, json
-from flask_restful import Api, Resource, fields, marshal_with
+from flask_restful import Api, Resource, fields, marshal_with, reqparse
 
 room = Blueprint('room', __name__)
 api = Api(room)
+
+parser = reqparse.RequestParser()
+parser.add_argument('number', type=int, required=True)
+parser.add_argument('level', type=str, required=True)
+parser.add_argument('status', type=str, required=True)
+parser.add_argument('price', type=float, required=True)
 
 class Room:
     def __init__(self, number, level, status, price):
@@ -50,14 +56,13 @@ class RoomResource(Resource):
 
     @marshal_with(resource)
     def post(self):
-        data = request.json
-        for room in data:
-            room_list.append(Room(
-                room['number'],
-                room['level'],
-                room['status'],
-                room['price']
-            ))
+        args = parser.parse_args()
+        room_list.append(Room(
+            args['number'],
+            args['level'],
+            args['status'],
+            args['price']
+        ))
         return room_list
 
     @marshal_with(resource)
