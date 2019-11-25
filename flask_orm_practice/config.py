@@ -1,7 +1,7 @@
 class Config:
     TEST_VALUE = "CONFIG_VALUE"
     SECRET_KEY = b'\x08\x0e_\xb8\x94]\xacL\x13N\xedVD\xba\xfd\x85'
-    PG_USER = "your_user"
+    PG_USER = "postgres"
     PG_PASSWORD = "password"
     PG_HOST = "localhost"
     PG_PORT = 5432
@@ -11,7 +11,7 @@ class Config:
 
 
 class TestConfig(Config):
-    PG_USER = "your_user"
+    PG_USER = "postgres"
     PG_PASSWORD = "password"
     PG_HOST = "localhost"
     PG_PORT = 5432
