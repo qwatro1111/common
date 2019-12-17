@@ -1,0 +1,1 @@
+[{"id": 1, "name": "Lorem Ipsum", "location": "Kiev", "img_name": "riba.png"}, {"id": 2, "name": "Lorem Ipsum", "location": "Lviv", "img_name": "lorem-ipsum-generator-custom-placeholder-text.jpg"}, {"id": 3, "name": " \u041a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0438\u0439 Lorem Ipsum", "location": "Kiev", "img_name": "Lorem-Ipsum-alternatives.png"}]
