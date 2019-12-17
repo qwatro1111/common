@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h1>Fruits page</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for i in catalog %}
+            {% if i == 'strawberry' %}
+                <li class="text-danger">{{ i }}</li>
+            {% else %}
+                <li>{{ i }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
