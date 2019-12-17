@@ -111,7 +111,13 @@ def task_8_count_customers_by_city(cur):
     Returns: 69 records in descending order
 
     """
-    cur.execute("SELECT COUNT(customers) AS count, city FROM customers GROUP BY city ORDER BY city DESC;")
+    cur.execute("""
+        SELECT 
+            COUNT(City) AS count,
+            City AS city
+        FROM Customers 
+        GROUP BY City;
+    """)
     return cur.fetchall()
 
 
@@ -147,7 +153,7 @@ def task_11_list_customers_starting_from_11th(cur):
 
     Returns: 11 records
     """
-    cur.execute("SELECT * FROM customers WHERE customerid>10;")
+    cur.execute("SELECT * FROM customers WHERE customerid>11;")
     return cur.fetchall()
 
 
@@ -160,7 +166,16 @@ def task_12_list_suppliers_from_specified_countries(cur):
 
     Returns: 8 records
     """
-    cur.execute("SELECT * FROM suppliers WHERE country IN ('USA', 'UK', 'Japan');")
+    cur.execute("""
+        SELECT 
+            supplierid,
+            suppliername,
+            contactname,
+            city,
+            country 
+        FROM suppliers 
+        WHERE country IN ('USA', 'UK', 'Japan');
+    """)
     return cur.fetchall()
 
 
@@ -193,15 +208,15 @@ def task_14_list_products_with_supplier_information(cur):
     """
     cur.execute("""
         SELECT 
-            productid, 
-            productname, 
-            unit, 
-            price, 
-            country, 
-            city, 
-            suppliername 
-        FROM products 
-        LEFT JOIN suppliers ON products.supplierid=suppliers.supplierid;
+            Products.ProductId, 
+            Products.ProductName, 
+            Products.Unit, 
+            CONCAT('$',Products.Price::numeric) AS price, 
+            Suppliers.Country, 
+            Suppliers.City, 
+            Suppliers.SupplierName 
+        FROM Products 
+        LEFT JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID;
     """)
     return cur.fetchall()
 
